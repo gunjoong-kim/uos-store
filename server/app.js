@@ -14,6 +14,7 @@ app.use(helmet());
 app.use(cors());
 app.use(morgan('tiny'));
 
+
 app.use('/staff', staffRouter);
 // app.use('/sale', saleRouter);
 // app.use('/refund', refundRouter);
@@ -24,6 +25,6 @@ app.use((req, res, next) => {
 
 app.use((error, req, res, next) => {
     console.error(error);
-    res.sendStatus(500);
+    res.sendStatus(404);
 });
 app.listen(config.host.port);

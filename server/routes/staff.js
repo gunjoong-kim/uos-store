@@ -23,8 +23,7 @@ const validateSignup = [
 // POST /staff/signup
 router.post('/signup', validateSignup, staffController.signup);
 
-// POST /staff/login
-router.post('/login', validateCredential, staffController.login);
+router.post('/login', validateCredential, staffController.login)
 
 // GET /staff/me
 router.get('/me', isAuth, staffController.me);

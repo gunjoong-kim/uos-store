@@ -34,6 +34,7 @@ export async function login(req, res) {
         return res.status(401).json({ message: '비밀번호를 틀렸습니다.' });
     }
     const token = createJwtToken(staff_no);
+    console.log(token);
     res.status(200).json({ token, staff_no });
 }
 
