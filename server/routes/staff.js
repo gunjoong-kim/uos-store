@@ -5,6 +5,7 @@ import { validate } from '../middleware/validator.js';
 import * as staffController from '../controller/staff.js';
 import { isAuth } from '../middleware/staff.js';
 
+
 const router = express.Router();
 
 // 로그인 요청 확인
@@ -23,7 +24,9 @@ const validateSignup = [
 // POST /staff/signup
 router.post('/signup', validateSignup, staffController.signup);
 
-router.post('/login', validateCredential, staffController.login)
+router.post('/login', validateCredential, staffController.login,function(req,res){
+    res.render('../../client/pages/login.ejs');
+})
 
 // GET /staff/me
 router.get('/me', isAuth, staffController.me);

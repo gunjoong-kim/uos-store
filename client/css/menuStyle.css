@@ -1,0 +1,77 @@
+@charset "utp-8";
+
+@font-face {
+    font-family: 'Hanna',sans-serif;
+    src: url(//fonts.googleapis.com/earlyaccess/hanna.css);
+}
+
+body {
+  background: beige;
+  font-family: 'Hanna', sans-serif;
+}
+
+.myHeader {
+  background: #ffffff;
+  height: 50px;
+}
+
+.myHeader1 {
+  background: #ffffff;
+  height: 30px;
+}
+
+
+
+a {
+  text-decoration-line: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.menu:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.menu > li {
+  position: relative;
+  float: left;
+}
+.menu > li > a {
+  display: block;
+  padding: 0 15px;
+  background: #98c9f1;
+  height: 40px;
+  line-height: 40px;
+  color: #555;
+  border: 2px solid white;
+}
+.menu > li:hover .depth_1 {
+  display: block;
+}
+.menu .depth_1 {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.menu .depth_1 a {
+  display: block;
+  padding: 5px;
+  background: #9abedb;
+  color: #eee;
+  border: 2px solid white;
+}

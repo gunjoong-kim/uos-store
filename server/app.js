@@ -9,6 +9,7 @@ import staffRouter from './routes/staff.js';
 // import refundRouter from './routes/refund.js';
 
 const app = express();
+app.set('view engine','ejs');
 app.use(express.json());
 app.use(helmet());
 app.use(cors());

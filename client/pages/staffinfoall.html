@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/menuStyle.css">
+    <link rel="stylesheet" href="../css/basic.css">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>직원등록</title>
-    <h1 class="myHeader">UOS25 관리 시스템</h1>
+    <title>Document</title>
+</head>
+<body> <h1 class="myHeader">UOS25 관리 시스템</h1>
+    <h3 class="myHeader1" id = "userinfo">!!!!!!!!!사용자 정보 불러오기 실패!!!!!!!!!</h3>
      <nav>
         <ul class="menu">
             <li>
@@ -43,12 +47,8 @@
                   <li><a href="#">지출관리</a></li>
                 </ul>
               </li>
-              <li>
-                <a>인력관리</a>
-                <ul class="depth_1">
-                  <li><a href="#">고용</a></li>
-                  <li><a href="#">해고</a></li>
-                </ul>
+              <li id="only_manager">
+               이 글자가 보이는 상태이면 js에 오류가 난 상태입니다.
               </li>
               <li>
                 <a>기타관리</a>
@@ -58,14 +58,15 @@
               </li>
           </ul>
     </nav>
-</head>
-<body>
-  <div>
-  <form class="basic-form">
-    <h1>전체직원정보</h1>
-        
-  </form> 
-  </div>
-<script src="../signup.js"></script>
+
+    <div>
+        <form class="basic-form">
+          <button class="basic-button" id="allinfo-btn">모든 직원정보 보기</button>
+        </form> 
+        </div>
+        <form class="all-form" id="staffInfo">
+        </form>
+        <script src="../menu.js"></script>
+        <script src="../staffinfoall.js"></script>
 </body>
 </html>

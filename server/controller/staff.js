@@ -59,4 +59,6 @@ export async function all(req, res) {
     }
     const data = await staffRepository.getAll();
     res.status(200).json(data);
+    console.log(data.length);
+    console.log("넘어감");
 }
