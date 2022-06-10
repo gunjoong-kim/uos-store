@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="../css/menuStyle.css">
-
+    <link rel="stylesheet" href="../css/basic.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,7 @@
             <li>
               <a>판매관리</a>
               <ul class="depth_1">
-                <li><a href="#">판매</a></li>
+                <li><a href="sale.html">판매</a></li>
                 <li><a href="refund.html">환불</a></li>
               </ul>
             </li>
@@ -58,6 +58,17 @@
           </ul>
     </nav>
 
+
+<div>
+  <form class="basic-form">
+    <h1>환불</h1>
+        <input class="basic-input" id="item_no" type="text" placeholder="환불받을 물품 번호를 입력."><br>
+        <input class="basic-input" id="return_reason" type="text" placeholder="환불사유를 입력하세요.">
+        <button id="refund_btn" class="basic-button">환불</button>
+        <button id="back_btn" class="basic-button">돌아가기</button>
+  </form> 
+</div>
 <script src="../menu.js"></script>
+<script src="../refund.js"></script>
 </body>
 </html>

@@ -11,7 +11,6 @@ async function login() {
   // 로그인을 위한 staff_no, password를 받아온다.
   const staff_no = input_staff.value;
   const password = input_password.value;
-
   // 서버의 baseURL를 설정하고 로그인에 대한 url를 설정한다.
   const baseURL ='http://localhost:3000';
   const url = '/staff/login';

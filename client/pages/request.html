@@ -57,21 +57,22 @@
               </li>
           </ul>
     </nav>
+    <form class="basic-form">
+        <h1>발주</h1>
+        <input class="basic-input" id="product-no" placeholder="제품번호를 입력하세요">
+        <input class="basic-input" id="request-cnt" placeholder="수량을 입력하세요">
+        <button class="basic-button" id="add-btn">발주목록에 추가</button>
+        <button class="basic-button" id="all-delete-btn">발주목록 초기화</button>
+    </form>
+    <form class="basic-form">
+        <h1>현재 추가된 발주목록</h1>
+        <div id="request-list">
+          <h4>발주목록을 추가해주세요</h4>
+        </div>
+        <button class="basic-button" id="request-btn">발주하기</button>
+    </form>
 
-
-<div>
-  <form class="basic-form">
-    <h1>직원등록</h1>
-        <input class="basic-input" id="staff_no" type="text" placeholder="직원번호를 입력하세요"><br>
-        <input class="basic-input" id="password" type="text" placeholder="비밀번호를 입력하세요"><br>
-        <input class="basic-input" id="staff_nm" type="text" placeholder="이름을 입력하세요"><br>
-        <input class="basic-input" id="position_cd" type="text" placeholder="직책코드를 입력하세요"><br>
-        <button id="signup_btn" class="basic-button">등록</button>
-        <button id="back_btn" class="basic-button">돌아가기</button>
-  </form> 
-</div>
 <script src="../menu.js"></script>
-<script src="../signup.js"></script>
-    
+<script src="../request.js"></script>
 </body>
 </html>
