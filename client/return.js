@@ -17,7 +17,13 @@ function allDelete(){
 function addReturnToList(){
     const item_no=input_item_no.value;
     const return_reason=input_return_reason.value;
-    console.log(item_no);
+    if(!item_no){
+        alert("물품번호를 입력하세요!");
+        return;
+      } else if(!return_reason){
+        alert("반품사유를 입력하세요!");
+        return;
+      }
     items.push({item_no:item_no,return_reason:return_reason});
     const tag=document.createElement('div');
     tag.innerHTML=`<h4>물품번호 ${items[index].item_no} 

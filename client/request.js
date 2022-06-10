@@ -18,7 +18,13 @@ function allDelete(){
 function addRequestToList(){
     const product_no=input_product_no.value;
     const request_cnt=input_request_cnt.value;
-    console.log(product_no);
+    if(!product_no){
+      alert("제품번호를 입력하세요!");
+      return;
+    } else if(!request_cnt){
+      alert("수량을 입력하세요!");
+      return;
+    }
     items.push({product_no:product_no,request_cnt:request_cnt});
     const tag=document.createElement('div');
     tag.innerHTML=`<h4 id="list">제품번호 ${items[index].product_no} 
