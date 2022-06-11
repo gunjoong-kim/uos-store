@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="../css/menuStyle.css">
-
+    <link rel="stylesheet" href="../css/basic.css">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +15,10 @@
             <li>
               <a>주문 반품 관리</a>
               <ul class="depth_1">
-                <li><a href="request.html">주문관리</a></li>
-                <li><a href="return.html">반품관리</a></li>
-                <li><a href="canclerequest.html">발주취소</a></li>
-                <li><a href="canclereturn.html">반품취소</a></li>
+                <li><a href="request.html">발주</a></li>
+                <li><a href="return.html">반품</a></li>
+                <li><a href="canclerequest.html">발주조회 및 취소</a></li>
+                <li><a href="canclereturn.html">반품조회 및 취소</a></li>
               </ul>
             </li>
             <li>
@@ -60,6 +60,17 @@
           </ul>
     </nav>
 
+
+<div>
+  <form class="basic-form">
+    <h1>해고</h1>
+        <input class="basic-input" id="staff_no" type="text" placeholder="해고할 직원 번호를 입력하세요"><br>
+        <button id="signup_btn" class="basic-button">등록</button>
+        <button id="back_btn" class="basic-button">돌아가기</button>
+  </form> 
+</div>
 <script src="../menu.js"></script>
+<script src="../fire.js"></script>
+    
 </body>
 </html>

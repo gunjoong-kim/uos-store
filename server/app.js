@@ -5,27 +5,29 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import { config } from './config.js';
 import staffRouter from './routes/staff.js';
-// import saleRouter from './routes/sale.js';
-// import refundRouter from './routes/refund.js';
+import saleRouter from './routes/sale.js';
+import refundRouter from './routes/refund.js';
+import requestListRouter from './routes/request_list.js';
+import returnListRouter from './routes/return_list.js';
 
 const app = express();
-app.set('view engine','ejs');
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
 app.use(morgan('tiny'));
 
-
 app.use('/staff', staffRouter);
-// app.use('/sale', saleRouter);
-// app.use('/refund', refundRouter);
+app.use('/sale', saleRouter);
+app.use('/refund', refundRouter);
+app.use('/request_list', requestListRouter);
+app.use('/return_list', returnListRouter);
 
 app.use((req, res, next) => {
-    res.sendStatus(404);
+  res.sendStatus(404);
 });
 
 app.use((error, req, res, next) => {
-    console.error(error);
-    res.sendStatus(404);
+  console.error(error);
+  res.sendStatus(500);
 });
 app.listen(config.host.port);

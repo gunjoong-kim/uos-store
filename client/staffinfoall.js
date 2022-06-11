@@ -38,17 +38,35 @@ async function staffInfoAll() {
   // 데이터를 html에 넣어서 만들어 줍니다.
   for(var i=0;i<data.length;i++){
     const tag=document.createElement('div');
-    tag.innerHTML=`<h4>사원번호 : ${data[i].STAFF_NO} 
-        사원이름 : ${data[i].STAFF_NM} 
-        근무시작시간 : ${data[i].WORK_START_TIME} 
-        근무종료시간 : ${data[i].WORK_END_TIME}
-        근무시작시간 : ${data[i].WORK_START_TIME}
-        근무종료시간 : ${data[i].WORK_END_TIME}
-        고용일자 : ${data[i].EMPLOY_DATE}
-        해고일자 : ${data[i].DISCHARGE_DATE}
-        시급 : ${data[i].SALARY}
-        계좌번호 : ${data[i].CCOUNT_NO}
-        직책코드 : ${data[i].POSITION_CD}</h4>`;
+    tag.innerHTML=`
+    <center>
+    <table border="1">
+    <tr>
+    <!--첫번째줄-->
+    <td>사원번호</td>
+    <td>사원이름</td>
+    <td>근무시작시간</td>
+    <td>근무종료시간</td>
+    <td>고용일자</td>
+    <td>해고일자</td>
+    <td>시급</td>
+    <td>계좌</td>
+    <td>직책코드</td>
+    </tr>
+    <tr>
+    <td>${data[i].STAFF_NO}</td>
+    <td>${data[i].STAFF_NM}</td> 
+    <td>${data[i].WORK_START_TIME}</td> 
+    <td>${data[i].WORK_END_TIME}</td> 
+    <td>${data[i].EMPLOY_DATE}</td> 
+    <td>${data[i].DISCHARGE_DATE}</td> 
+    <td>${data[i].SALARY}</td> 
+    <td>${data[i].CCOUNT_NO}</td> 
+    <td>${data[i].POSITION_CD}</td> 
+    </tr>
+    </table>
+    </center>
+`;
     staffInfo.appendChild(tag);
     }
 }

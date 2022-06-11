@@ -8,15 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body> <a href="menu.html"><h1 class="myHeader">UOS25 관리 시스템</h1></a>
+<body> <h1 class="myHeader">UOS25 관리 시스템</h1>
     <h3 class="myHeader1" id = "userinfo">!!!!!!!!!사용자 정보 불러오기 실패!!!!!!!!!</h3>
      <nav>
         <ul class="menu">
             <li>
               <a>주문 반품 관리</a>
               <ul class="depth_1">
-                <li><a href="request.html">주문관리</a></li>
-                <li><a href="return.html">반품관리</a></li>
+                <li><a href="request.html">발주</a></li>
+                <li><a href="return.html">반품</a></li>
+                <li><a href="canclerequest.html">발주조회 및 취소</a></li>
+                <li><a href="canclereturn.html">반품조회 및 취소</a></li>
               </ul>
             </li>
             <li>
@@ -63,12 +65,14 @@
   <form class="basic-form">
     <h1>환불</h1>
         <input class="basic-input" id="item_no" type="text" placeholder="환불받을 물품 번호를 입력."><br>
-        <input class="basic-input" id="return_reason" type="text" placeholder="환불사유를 입력하세요.">
+        <input class="basic-input" id="refund_reason" type="text" placeholder="환불 사유를 입력하세요"><br>
+        <input class="basic-input" id="item_status" type="text" placeholder="물품 상태를 입력하세요"><br>
         <button id="refund_btn" class="basic-button">환불</button>
         <button id="back_btn" class="basic-button">돌아가기</button>
   </form> 
 </div>
 <script src="../menu.js"></script>
 <script src="../refund.js"></script>
+    
 </body>
 </html>

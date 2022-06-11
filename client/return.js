@@ -35,7 +35,7 @@ function addReturnToList(){
 
 async function returnToServer(){
   const baseURL = `http://localhost:3000`;
-  const url = '/staff/request?';
+  const url = '/return_list/add';
   const token=localStorage.getItem('token');
   // 정보를 받아오기 위해서는 로그인 되어 있어야 합니다.
   // 로그인 여부를 확인 하기 위해 headers에 Authorization에 token을
@@ -43,7 +43,7 @@ async function returnToServer(){
   // 어떤 요청이냐에 따라 API Spec을 확인하여 body를 추가합니다.
   // staff/me의 경우 로그인 정보만 보내면 확인 가능하므로 body추가는 불필요 합니다.
   const body={
-    items,
+    items
   }
 
   let res = await fetch(`${baseURL}${url}`, {
@@ -61,7 +61,7 @@ async function returnToServer(){
     console.log(data.message);
     return;
   } else {
-    alert("발주가 완료되었습니다.");
+    alert("반품이 완료되었습니다.");
   }
 }
 

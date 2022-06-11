@@ -37,7 +37,7 @@ async function staffInfoMe() {
   <a>인력관리</a>
     <ul class="depth_1">
       <li><a href="signup.html">고용</a></li>
-      <li><a href="#">해고</a></li>
+      <li><a href="fire.html">해고</a></li>
       <li><a href="staffinfoall.html">직원정보</a></li>
     </ul>
   </li>`;

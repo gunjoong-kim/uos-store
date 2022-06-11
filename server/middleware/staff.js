@@ -9,6 +9,7 @@ export const isAuth = async (req, res, next) => {
     if (!(authHeader && authHeader.startsWith('Bearer '))) {
         return res.status(401).json(AUTH_ERROR);
     }
+
     const token = authHeader.split(' ')[1];
 
     jwt.verify(token, config.jwt.secretKey, async (error, decoded) => {
