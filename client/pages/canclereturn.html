@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="../css/menuStyle.css">
+    <link rel="stylesheet" href="../css/basic.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> <h1 class="myHeader">UOS25 관리 시스템</h1>
+    <h3 class="myHeader1" id = "userinfo">!!!!!!!!!사용자 정보 불러오기 실패!!!!!!!!!</h3>
+     <nav>
+        <ul class="menu">
+            <li>
+              <a>발주 반품 관리</a>
+              <ul class="depth_1">
+                <li><a href="request.html">발주</a></li>
+                <li><a href="return.html">반품</a></li>
+                <li><a href="canclerequest.html">발주조회 및 취소</a></li>
+                <li><a href="canclereturn.html">반품조회 및 취소</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>판매관리</a>
+              <ul class="depth_1">
+                <li><a href="#">판매</a></li>
+                <li><a href="refund.html">환불</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>재고관리</a>
+              <ul class="depth_1">
+                <li><a href="#">입고관리</a></li>
+              </ul>
+            </li>
+            <li>
+                <a>품목관리</a>
+                <ul class="depth_1">
+                  <li><a href="#">제품등록</a></li>
+                  <li><a href="#">제품삭제</a></li>
+                </ul>
+              </li>
+              <li>
+                <a>자금관리</a>
+                <ul class="depth_1">
+                  <li><a href="#">수입관리</a></li>
+                  <li><a href="#">지출관리</a></li>
+                </ul>
+              </li>
+              <li id="only_manager">
+               이 글자가 보이는 상태이면 js에 오류가 난 상태입니다.
+              </li>
+              <li>
+                <a>기타관리</a>
+                <ul class="depth_1">
+                  <li><a href="#">고객관리</a></li>
+                </ul>
+              </li>
+          </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <button style="margin:auto; display:block;" class="basic-button" id="all_return">반품 전체조회</button>
+    <form class="basic-form">
+        <h1>반품취소</h1>
+        <input class="basic-input" id="return_no" placeholder="취소할 반품번호를 입력하세요">
+        <button class="basic-button" id="cancle_btn">반품취소하기</button>
+    </form>
+<script src="../menu.js"></script>
+<script src="../canclereturn.js"></script>
+</body>
+</html>

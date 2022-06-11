@@ -37,6 +37,7 @@ function addRequestToList(){
 async function request(){
   const baseURL = `http://localhost:3000`;
   const url = '/staff/request?';
+  const url_request_list='request_list/add'
   const token=localStorage.getItem('token');
   // 정보를 받아오기 위해서는 로그인 되어 있어야 합니다.
   // 로그인 여부를 확인 하기 위해 headers에 Authorization에 token을
@@ -47,7 +48,7 @@ async function request(){
     items
   }
 
-  let res = await fetch(`${baseURL}${url}`, {
+  let res = await fetch(`${baseURL}${url_request_list}`, {
     method: 'POST',
     headers: {
       'Content-Type': 'applicaion/json',
