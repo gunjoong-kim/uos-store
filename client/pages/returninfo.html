@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body> <h1 class="myHeader">UOS25 관리 시스템</h1>
+<body> <a href="menu.html"><h1 class="myHeader">UOS25 관리 시스템</h1></a>
     <h3 class="myHeader1" id = "userinfo">!!!!!!!!!사용자 정보 불러오기 실패!!!!!!!!!</h3>
      <nav>
         <ul class="menu">
@@ -18,8 +18,8 @@
               <ul class="depth_1">
                 <li><a href="request.html">발주</a></li>
                 <li><a href="return.html">반품</a></li>
-                <li><a href="canclerequest.html">발주조회 및 취소</a></li>
-                <li><a href="canclereturn.html">반품조회 및 취소</a></li>
+                <li><a href="requestinfo.html">발주조회</a></li>
+                <li><a href="returninfo.html">반품조회</a></li>
               </ul>
             </li>
             <li>
@@ -63,13 +63,13 @@
     <br>
     <br>
     <br>
-    <button style="margin:auto; display:block;" class="basic-button" id="all_request">발주 전체조회</button>
-    <form class="basic-form">
-        <h1>발주취소</h1>
-        <input class="basic-input" id="request_no" placeholder="취소할 발주번호를 입력하세요">
-        <button class="basic-button" id="cancle_btn">발주취소하기</button>
+    <button style="margin:auto; display:block;" class="basic-button" id="all_return">반품 전체조회</button>
+    <form class="all-form">
+        <div id="return-list">
+
+        </div>
     </form>
 <script src="../menu.js"></script>
-<script src="../canclerequest.js"></script>
+<script src="../returninfo.js"></script>
 </body>
 </html>
