@@ -24,8 +24,6 @@ export async function createRequest(staffNo) {
 }
 
 export async function getRequestByDate(date) {
-  console.log("serverserver");
-  console.log(date);
   return await db
     .execute(`SELECT * FROM REQUEST WHERE REQUEST_DT=(:1)`, [date], {
       outFormat: format,
