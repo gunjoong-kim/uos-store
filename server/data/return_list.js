@@ -15,7 +15,7 @@ export async function createReturnList(returnList) {
 
 export async function getReturnList(item_no) {
   return await db
-    .execute(`SELECT * FROM RETURN_LIST WHERE ITEM_NO=(:1)`, [item_no], {
+    .execute(`SELECT * FROM RETURN_LIST WHERE ITEM_NO=To_Date((:1),'YY-MM-DD')`, [item_no], {
       outFormat: format,
     })
     .then((result) => result.rows[0])

@@ -24,6 +24,11 @@ async function discharge() {
     },
   });
 
+  const data=await res.json();
+  
+  alert(data.message);
+
+
   
 
   // 데이터를 받아온다.

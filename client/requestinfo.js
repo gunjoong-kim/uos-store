@@ -16,11 +16,18 @@ async function allRequest(){
         }
     });
 
+  
+
   // 데이터를 받아온다.
     const data = await res.json();
     console.log(data);
     if(!data){
       alert(data.message);
+    }
+
+    if(data.length<=0){
+      alert("해당 날짜에 발주된 정보가 없습니다.")
+      return;
     }
 
     for(var i=0;i<data.length;i++){

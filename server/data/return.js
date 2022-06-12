@@ -14,7 +14,7 @@ export async function createReturn(staffNo) {
   console.log(return_no, return_dt, staff_no, store_no);
   await db
     .execute(
-      `INSERT INTO RETURN VALUES((:1),(:2),(:3),(:4))`,
+      `INSERT INTO RETURN VALUES((:1),To_Date((:2),'YY-MM-DD'),(:3),(:4))`,
       [return_no, return_dt, staff_no, store_no],
       { outFormat: format }
     )
@@ -24,7 +24,7 @@ export async function createReturn(staffNo) {
 
 export async function getReturnByDate(date) {
   return await db
-    .execute('SELECT * FROM RETURN WHERE RETURN_DT=(:1)', [date], {
+    .execute(`SELECT * FROM RETURN WHERE RETURN_DT=To_Date((:1),'YY-MM-DD')`, [date], {
       outFormat: format,
     })
     .then((result) => result.rows)

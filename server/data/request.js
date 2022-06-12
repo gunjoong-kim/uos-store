@@ -15,7 +15,7 @@ export async function createRequest(staffNo) {
   console.log(request_no, request_dt, staff_no, store_no);
   await db
     .execute(
-      `INSERT INTO REQUEST VALUES((:1),(:2),(:3),(:4))`,
+      `INSERT INTO REQUEST VALUES((:1),To_Date((:2),'YY-MM-DD'),(:3),(:4))`,
       [request_no, request_dt, staff_no, store_no],
       { outFormat: format }
     )
@@ -25,8 +25,8 @@ export async function createRequest(staffNo) {
 
 export async function getRequestByDate(date) {
   return await db
-    .execute(`SELECT * FROM REQUEST WHERE REQUEST_DT=(:1)`, [date], {
-      outFormat: format,
+  .execute(`SELECT * FROM REQUEST WHERE REQUEST_DT=To_Date((:1),'YY-MM-DD')`, [date], {
+    outFormat: format,
     })
     .then((result) => result.rows)
     .catch(console.error);

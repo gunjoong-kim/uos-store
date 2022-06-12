@@ -36,7 +36,7 @@ export async function dischargeStaff(staff_no) {
   console.log(dischargeDate);
   return db
     .execute(
-      `UPDATE STAFF SET DISCHARGE_DATE=(:1) WHERE STAFF_NO=(:2)`,
+      `UPDATE STAFF SET DISCHARGE_DATE=To_Date((:1),'YY-MM-DD') WHERE STAFF_NO=(:2)`,
       [dischargeDate, staff_no],
       { outFormat: format }
     )

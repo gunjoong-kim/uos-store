@@ -68,5 +68,5 @@ export async function discharge(req, res) {
   }
   const dischargeStaffNo = req.params.staff_no;
   await staffRepository.dischargeStaff(dischargeStaffNo);
-  res.status(200).json();
+  res.status(200).json({message:'해고가 성공하였습니다.'});
 }
