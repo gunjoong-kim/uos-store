@@ -38,8 +38,7 @@ async function request(){
   const baseURL = `http://localhost:3000`;
   const url = '/request_list/add';
   const token=localStorage.getItem('token');
-  
-  console.log(items);
+
 
   const xhr=new XMLHttpRequest();
   xhr.open('POST',`${baseURL}${url}`);
@@ -47,9 +46,10 @@ async function request(){
   xhr.setRequestHeader('Authorization',`Bearer ${token}`);
   xhr.send(JSON.stringify(items));
   xhr.onreadystatechange=()=>{
-    if(xhr.status>=200 &&xhr.status<=299){
+    if(xhr.readyState !==XMLHttpRequest.DONE) return;
+    if(xhr.status>=200 && xhr.status<=299){
       alert('발주가 완료되었습니다.');
-    }else alert(xhr.response.message);
+    }else alert(xhr.message);
   };
 }
 

@@ -1,25 +1,28 @@
 const allRequestBtn=document.querySelector('#all_request');
 const requestList=document.querySelector('#request-list');
+const input_requestDate=document.querySelector('#request-date');
 async function allRequest(){
-  
+    const requestDate=input_requestDate.value;
     const baseURL ='http://localhost:3000';
-    const url = '/staff/login';
-
+    const url = `/request/${requestDate}`;
+    const token=localStorage.getItem('token');
+    console.log(requestDate);
   // API Spec에 맞춰 fetch를 작성한다.
     let res = await fetch(`${baseURL}${url}`, {
         method: 'GET',
         headers: {
         'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`
         }
     });
 
   // 데이터를 받아온다.
     const data = await res.json();
-
+    console.log(data);
     if(!data){
       alert(data.message);
-
     }
+
     for(var i=0;i<data.length;i++){
       const tag=document.createElement('div');
       tag.innerHTML=`

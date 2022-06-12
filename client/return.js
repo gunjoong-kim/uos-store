@@ -43,6 +43,7 @@ async function returnToServer(){
   xhr.setRequestHeader('Authorization',`Bearer ${token}`);
   xhr.send(JSON.stringify(items));
   xhr.onreadystatechange=()=>{
+    if(xhr.readyState!==XMLHttpRequest.DONE) return;
     if(xhr.status>=200 &&xhr.status<=299){
       alert('반품이 완료되었습니다.');
     }else alert(xhr.response.message);
